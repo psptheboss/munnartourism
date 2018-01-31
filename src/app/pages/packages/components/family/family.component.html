@@ -1,0 +1,77 @@
+<form style="display:none">
+
+
+    <div class="row">
+    <div class="col-md-6">
+    <div class="form-group form-black label-floating is-empty">
+    <label for="fname" class="control-label">First Name</label>
+    <input [(ngModel)]="fname" name="fname" class="form-control" id="fname" >
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group form-black label-floating is-empty">
+    <label class="control-label">Last Name</label>
+    <input class="form-control" [(ngModel)]="lname" name="lname" >
+    </div>
+    </div>
+    </div>
+    
+    <div class="row">
+    <div class="col-md-12">
+    <div class="form-group form-black label-floating is-empty">
+    <label class="control-label">Email</label>
+    <input class="form-control" [(ngModel)]="email" name="email" > 
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-6">
+    <div class="form-group form-black label-floating is-empty">
+    <label class="control-label">Mobile</label>
+    <input class="form-control" [(ngModel)]="mobile" name="mobile">
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group form-black label-floating is-empty">
+    <label class="control-label">Place</label>
+    <input class="form-control" [(ngModel)]="place" name="place" >
+    </div>
+    </div>
+    </div>
+    
+    
+    <div class="row">
+    <div class="col-md-12">
+    <div class="form-group">
+    
+    <div class="form-group form-black label-floating is-empty">
+    <label class="control-label">Write your query here</label>
+    <textarea class="form-control" [(ngModel)]="content" name="content" ></textarea>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <button type="submit" (click)="addPost($event)" class="btn btn-danger pull-right">Update Profile</button>
+    <div class="clearfix"></div>
+    </form>
+    <div class="container">
+        Note:Click the item to view briefly
+        <table class="table table-hover" >
+          <thead >
+            <tr >
+              <th>Make</th>
+              <th>Model</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody *ngFor ="let post of posts | async">
+            <tr (click)="getPost(post.id)">
+              <td >{{ post.data.title }}</td>
+              <td>{{post.data.content}}</td>
+              <td><input type="button" class="btn btn-default" (click)="deletePost(post.id)" value="Delete"></td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>

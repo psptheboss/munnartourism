@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel  panel-transparent animated zoomIn" zoom-in="" >
+        <div class="panel-heading" >Online Enquiry</div>
+        <div class="panel-body" >
+          
+            <table class="table table-hover" >
+                <thead >
+                  <tr style="background-color:rgb(82, 189, 153)" >
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>Place</th>
+                    <th>Query</th>
+                    <th>Actions</th>
+                    
+                    </tr>
+                </thead>
+                <tbody *ngFor ="let post of posts | async">
+                  <tr (click)="getPost(post.id)">
+                    <td >{{ post.data.fname }}  {{ post.data.lname }}</td>
+                    
+                    <td><input style=" background:transparent;border:none" type="text" [(ngModel)]="post.data.mobile"></td>
+                    
+                    <td>{{post.data.email}}</td>
+                    <td>{{post.data.place}}</td>
+                    <td>{{post.data.content}}</td>
+                    <td><input type="button" class="btn btn-default" (click)="deletePost(post.id)" value="Delete">
+                    <!-- <td><input type="button" class="btn btn-default" (click)="editPost(post.id)" value="Edit"> -->
+                      </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+        </div>
+        </div>
+        </div>
+</div>
+
+    <div class="container">
+  
+          </div>
+    
