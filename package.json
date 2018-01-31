@@ -2,15 +2,6 @@
   "name": "ng2-admin",
   "version": "1.0.0",
   "description": "Angular and Bootstrap 4 Admin Template.",
-  "author": "Akveo <contact@akveo.com>",
-  "homepage": "http://akveo.github.io/ng2-admin/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/akveo/ng2-admin.git"
-  },
-  "bugs": {
-    "url": "https://github.com/akveo/ng2-admin/issues"
-  },
   "license": "MIT",
   "scripts": {
     "ng": "ng",

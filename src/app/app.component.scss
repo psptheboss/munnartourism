@@ -1,5 +1,5 @@
 @import './theme/sass/conf/conf';
-@import './theme/components/baSidebar/baSidebar';
+
 
 :host /deep/ {
   @mixin layout-collapsed() {
@@ -64,7 +64,7 @@
       }
 
       .al-sidebar-sublist {
-        @include default-sublist();
+        // @include default-sublist();
         top: auto;
         left: auto;
         background: none;
