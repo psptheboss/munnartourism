@@ -15,7 +15,7 @@ router.use(function(req, res, next) {
 });
 
 
-app.listen(process.env.PORT || 3000, function(){
+app.listen(process.env.PORT || 4080, function(){
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
   });
 app.use(express.static(path.join(__dirname, 'dist')));
@@ -23,13 +23,13 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use('/', router);
 
 
-var email 	= require("emailjs");
-var server 	= email.server.connect({
-    user:    "pspalavesam", 
-    password:"palavesh@8870", 
-    host:    "smtp.gmail.com", 
-    ssl:     true
- });
+// var email 	= require("emailjs");
+// var server 	= email.server.connect({
+//     user:    "pspalavesam", 
+//     password:"palavesh@8870", 
+//     host:    "smtp.gmail.com", 
+//     ssl:     true
+//  });
 // send the message and get a callback with an error or details of the message that was sent
 
 function test(){
