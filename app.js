@@ -15,7 +15,7 @@ router.use(function(req, res, next) {
 });
 
 
-app.listen(process.env.PORT || 3080, function(){
+app.listen(process.env.PORT || 5000, function(){
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
   });
 app.use(express.static(path.join(__dirname, 'dist')));
