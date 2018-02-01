@@ -9,7 +9,8 @@
       "build": "ng build --aot=false",
       "test": "ng test",
       "lint": "ng lint",
-      "e2e": "ng e2e"
+      "e2e": "ng e2e",
+      "post-install":"ng build --prod  --aot=false"
      
   },
   "private": true,

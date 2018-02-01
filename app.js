@@ -10,12 +10,12 @@ var router         = express.Router();
 // app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 router.use(function(req, res, next) {  
-    res.header('Access-Control-Allow-Origin', 'http://localhost:4080');
+    res.header('Access-Control-Allow-Origin', 'http://localhost:3080');
     next();	
 });
 
 
-app.listen(process.env.PORT || 4080, function(){
+app.listen(process.env.PORT || 3080, function(){
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
   });
 app.use(express.static(path.join(__dirname, 'dist')));
