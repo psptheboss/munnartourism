@@ -11,6 +11,8 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import {ToastModule} from 'ng2-toastr/ng2-toastr';
 import { ToastOptions } from 'ng2-toastr/src/toast-options';
 import { CustomOption } from './pages/home/custom-toast';
+import { Calendar } from './pages/dashboard/calendar/calendar.component';
+
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -24,6 +26,7 @@ import { GlobalState } from './global.state';
 import { NgaModule } from './theme/nga.module';
 import { PagesModule } from './pages/pages.module';
 import { CommonModule } from '@angular/common';
+
 
 var firebaseConfig = {
   apiKey: "AIzaSyCF478nuBpzg5c1Wqs9ZIekmuuubesUCuc",
@@ -56,7 +59,9 @@ export type StoreType = {
   ],
   imports: [ // import Angular's modules
     BrowserModule,
+    
     HttpModule,
+   
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
@@ -68,7 +73,9 @@ export type StoreType = {
     AngularFirestoreModule,
     ToastModule.forRoot(),
     CommonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    
+    
   ],
   providers: [ {provide:ToastOptions,useClass:CustomOption},APP_PROVIDERS
   ]
