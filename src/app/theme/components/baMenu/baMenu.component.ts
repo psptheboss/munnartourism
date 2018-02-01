@@ -69,7 +69,7 @@ export class BaMenu {
   }
 
   public toggleSubMenu($event): boolean {
-    let submenu = jQuery($event.currentTarget).next();
+    
 
     if (this.sidebarCollapsed) {
       this.expandMenu.emit(null);
@@ -78,7 +78,7 @@ export class BaMenu {
       }
     } else {
       $event.item.expanded = !$event.item.expanded;
-      submenu.slideToggle();
+   
     }
 
     return false;
