@@ -19,11 +19,19 @@ import { AyurvedaComponent } from './healthnwellness/components/ayurveda/ayurved
 import { YogaComponent } from './healthnwellness/components/yoga/yoga.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { Trip008Component } from './trip008/trip008.component';
+import { Trip007Component } from './trip007/trip007.component';
+import { Trip006Component } from './trip006/trip006.component';
+import { Trip009Component } from './trip009/trip009.component';
+import { Trip010Component } from './trip010/trip010.component';
+import { Trip011Component } from './trip011/trip011.component';
+import { Trip012Component } from './trip012/trip012.component';
+
 
 
 @NgModule({
   imports: [CommonModule, AppTranslationModule, NgaModule, routing],
-  declarations: [Pages ]
+  declarations: [Pages, Trip008Component, Trip007Component, Trip006Component, Trip009Component, Trip010Component, Trip011Component, Trip012Component]
 })
 export class PagesModule {
 }

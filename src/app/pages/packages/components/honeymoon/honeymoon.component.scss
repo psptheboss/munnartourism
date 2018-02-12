@@ -1,0 +1,50 @@
+h3{
+  color:rgb(0, 0, 0);
+}
+// img{
+//   opacity: 0.5;
+// }
+.button {
+  background-color: #004A7F;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: none;
+  color: rgb(241, 248, 234);
+  cursor: pointer;
+  display: inline-block;
+  font-family:Kristen ITC;
+  font-size: 11px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+}
+@-webkit-keyframes glowing {
+  0% { background-color: rgb(7, 148, 101); -webkit-box-shadow: 0 0 3px rgb(7, 148, 101); }
+  50% { background-color: rgb(0, 255, 200); -webkit-box-shadow: 0 0 40px rgb(0, 255, 200); }
+  100% { background-color: rgb(7, 148, 101); -webkit-box-shadow: 0 0 3px rgb(7, 148, 101); }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: rgb(7, 148, 101); -moz-box-shadow: 0 0 3px rgb(7, 148, 101); }
+  50% { background-color: rgb(0, 255, 200); -moz-box-shadow: 0 0 40px rgb(0, 255, 200); }
+  100% { background-color: rgb(7, 148, 101); -moz-box-shadow: 0 0 3px rgb(7, 148, 101); }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: rgb(7, 148, 101); box-shadow: 0 0 3px rgb(7, 148, 101); }
+  50% { background-color: rgb(0, 255, 200); box-shadow: 0 0 40px rgb(0, 255, 200); }
+  100% { background-color: rgb(7, 148, 101); box-shadow: 0 0 3px rgb(7, 148, 101); }
+}
+
+@keyframes glowing {
+  0% { background-color: rgb(7, 148, 101); box-shadow: 0 0 3px rgb(7, 148, 101); }
+  50% { background-color: rgb(0, 255, 200); box-shadow: 0 0 40px rgb(0, 255, 200); }
+  100% { background-color: rgb(7, 148, 101); box-shadow: 0 0 3px rgb(7, 148, 101); }
+}
+
+.button {
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}

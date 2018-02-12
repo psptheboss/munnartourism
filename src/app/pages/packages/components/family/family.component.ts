@@ -1,25 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
+import {test} from './x'
+// import {sendMail} from "../../../../../../app"
 
-interface Post{
-  fname:string;
-  lname:string;
-  email:string;
-  mobile:string;
-  place:string;
-  content:string;
-}
-interface PostId extends Post{
-  id:string;
-  fname:string;
-  lname:string;
-  email:string;
-  mobile:string;
-  place:string;
-  content:string;
-
-}
 @Component({
   selector: 'app-family',
   templateUrl: './family.component.html',
@@ -27,49 +11,54 @@ interface PostId extends Post{
 })
 export class FamilyComponent implements OnInit {
 
-
-  postCol: AngularFirestoreCollection<Post>;
-  posts:any;
-
-  fname:string;
-  lname:string;
-  email:string;
-  mobile:string;
-  place:string;
-  content:string;
-
-
-  
-
-  postDoc:AngularFirestoreDocument<Post>;
-  post:Observable<Post>;
-  constructor(private afs:AngularFirestore) { }
+  constructor() { }
   
   ngOnInit() {
-    this.postCol = this.afs.collection('posts');
-    this.posts = this.postCol.snapshotChanges()
-    .map(actions =>{
-    return actions.map(a => {
-      const data = a.payload.doc.data() as Post;
-      const id=a.payload.doc.id;
-      return { id,data};
-
-         })
-    })
-
+  
+   
   }
-  addPost(e) {
-    this.afs.collection('posts').add({'fname': this.fname, 'lname': this.lname,'email': this.email,'mobile': this.mobile,'place': this.place,'content': this.content});
-    
-  }
-  getPost(postId){
-    this.postDoc =this.afs.doc('/posts/'+postId);
-    this.post = this.postDoc.valueChanges();
-    }
-    
-    deletePost(postId){
-      this.afs.doc('posts/'+postId).delete();
+  
+  winOpen007(e){
+    var mm=window.open("#/trip007", );
+    if(mm.closed==true){
+      console.log("closed")
     }
   
- 
+  }
+  winOpen008(e){
+    var mm=window.open("#/trip008", );
+    if(mm.closed==true){
+      console.log("closed")
+    }
+  
+  }
+  winOpen009(e){
+    var mm=window.open("#/trip009", );
+    if(mm.closed==true){
+      console.log("closed")
+    }
+  
+  }
+  winOpen010(e){
+    var mm=window.open("#/trip010", );
+    if(mm.closed==true){
+      console.log("closed")
+    }
+  
+  }
+  winOpen011(e){
+    var mm=window.open("#/trip011", );
+    if(mm.closed==true){
+      console.log("closed")
+    }
+  
+  }
+  winOpen012(e){
+    var mm=window.open("#/trip012", );
+    if(mm.closed==true){
+      console.log("closed")
+    }
+  
+  }
+    
 }

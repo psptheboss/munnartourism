@@ -1,77 +1,60 @@
-<form style="display:none">
-
-
-    <div class="row">
-    <div class="col-md-6">
-    <div class="form-group form-black label-floating is-empty">
-    <label for="fname" class="control-label">First Name</label>
-    <input [(ngModel)]="fname" name="fname" class="form-control" id="fname" >
-    </div>
-    </div>
-    <div class="col-md-6">
-    <div class="form-group form-black label-floating is-empty">
-    <label class="control-label">Last Name</label>
-    <input class="form-control" [(ngModel)]="lname" name="lname" >
-    </div>
-    </div>
-    </div>
-    
-    <div class="row">
-    <div class="col-md-12">
-    <div class="form-group form-black label-floating is-empty">
-    <label class="control-label">Email</label>
-    <input class="form-control" [(ngModel)]="email" name="email" > 
-    </div>
-    </div>
-    </div>
-    <div class="row">
-    <div class="col-md-6">
-    <div class="form-group form-black label-floating is-empty">
-    <label class="control-label">Mobile</label>
-    <input class="form-control" [(ngModel)]="mobile" name="mobile">
-    </div>
-    </div>
-    <div class="col-md-6">
-    <div class="form-group form-black label-floating is-empty">
-    <label class="control-label">Place</label>
-    <input class="form-control" [(ngModel)]="place" name="place" >
-    </div>
-    </div>
-    </div>
-    
-    
-    <div class="row">
-    <div class="col-md-12">
-    <div class="form-group">
-    
-    <div class="form-group form-black label-floating is-empty">
-    <label class="control-label">Write your query here</label>
-    <textarea class="form-control" [(ngModel)]="content" name="content" ></textarea>
-    </div>
-    </div>
-    </div>
-    </div>
-    
-    <button type="submit" (click)="addPost($event)" class="btn btn-danger pull-right">Update Profile</button>
-    <div class="clearfix"></div>
-    </form>
-    <div class="container">
-        Note:Click the item to view briefly
-        <table class="table table-hover" >
-          <thead >
-            <tr >
-              <th>Make</th>
-              <th>Model</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody *ngFor ="let post of posts | async">
-            <tr (click)="getPost(post.id)">
-              <td >{{ post.data.title }}</td>
-              <td>{{post.data.content}}</td>
-              <td><input type="button" class="btn btn-default" (click)="deletePost(post.id)" value="Delete"></td>
-            </tr>
-            
-          </tbody>
-        </table>
-      </div>
+<div class="container">
+        <div class="row">
+           <div class="col-md-4"  style="margin-bottom: 20px;">
+              <img src="../assets/MunnarT/fam/1.jpg" alt="test" class="img-responsive"style="height:350px">
+              <div class="carousel-caption">
+                 <h3>Cochin-Munnar-Cochin</h3>
+                 <h3>4 Days and 3 Nights</h3>
+                 <br>
+                 <input type="button" (click)="winOpen007($event)" class="button" style="float:right" value="More">
+              </div>
+           </div>
+           <div class="col-md-4">
+              <img src="../assets/MunnarT/fam/2.jpg" alt="test" class="img-responsive"style="height:350px" >
+              <div class="carousel-caption">
+                 <h3>Cochin - Munnar - Alleppey(Houseboat) - Cochin</h3>
+                 <h3>4 Days and 3 Nights</h3>
+                 <br>
+                 <input type="button" (click)="winOpen008($event)" class="button" style="float:right" value="More">
+              </div>
+           </div>
+           
+           <div class="col-md-4">
+              <img src="../assets/MunnarT/fam/3.jpg" alt="test" class="img-responsive" style="height:350px">
+              <div class="carousel-caption">
+                 <h3>Cochin - Munnar - Thekkady - Alleppey(Houseboat) - Cochin</h3>
+                 <h3>5 Days and 4 Nights</h3>
+                 <br>
+                 <input type="button" (click)="winOpen009($event)" class="button" style="float:right" value="More">
+              </div>
+           </div>
+        </div>
+        <div class="row">
+           <div class="col-md-4">
+              <img src="../assets/MunnarT/fam/4.jpg" alt="test" class="img-responsive" style="height:350px">
+              <div class="carousel-caption">
+                 <h3>Example headline.</h3>
+                 <br>
+                 <input type="button" (click)="winOpen010($event)" class="button" style="float:right" value="More">
+              </div>
+           </div>
+           <div class="col-md-4">
+              <img src="../assets/MunnarT/fam/6.jpg" alt="test" class="img-responsive" style="height:350px">
+              <div class="carousel-caption">
+                 <h3>Example headline.</h3>
+                 <br>
+                 <input type="button" (click)="winOpen011($event)" class="button" style="float:right" value="More">
+              </div>
+           </div>
+           
+           <div class="col-md-4">
+              <img src="../assets/MunnarT/fam/6.jpg" alt="test" class="img-responsive" style="height:350px">
+              <div class="carousel-caption">
+                 <h3>Example headline.</h3>
+                 <br>
+                 <input type="button" (click)="winOpen012($event)" class="button" style="float:right" value="More">
+              </div>
+           </div>
+           </div>
+      
+        </div>

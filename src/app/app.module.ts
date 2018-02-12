@@ -12,6 +12,7 @@ import {ToastModule} from 'ng2-toastr/ng2-toastr';
 import { ToastOptions } from 'ng2-toastr/src/toast-options';
 import { CustomOption } from './pages/home/custom-toast';
 import { Calendar } from './pages/dashboard/calendar/calendar.component';
+import { UsersService } from './users.service'
 
 
 /*
@@ -77,7 +78,7 @@ export type StoreType = {
     
     
   ],
-  providers: [ {provide:ToastOptions,useClass:CustomOption},APP_PROVIDERS
+  providers: [ {provide:ToastOptions,useClass:CustomOption},APP_PROVIDERS,UsersService
   ]
 })
 

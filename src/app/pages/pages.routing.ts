@@ -16,11 +16,44 @@ export const routes: Routes = [
     
   },
   {
+    path: 'trip001',
+    
+    loadChildren: 'app/pages/trip001/trip001.module#Trip001Module',
+    
+  },
+  {
+    path: 'trip002',
+    
+    loadChildren: 'app/pages/trip002/trip002.module#Trip002Module',
+    
+  },
+  {
+    path: 'trip003',
+    
+    loadChildren: 'app/pages/trip003/trip003.module#Trip003Module',
+    
+  },
+  {
+    path: 'trip004',
+    
+    loadChildren: 'app/pages/trip004/trip004.module#Trip004Module',
+    
+  },
+  {
+    path: 'trip005',
+    
+    loadChildren: 'app/pages/trip005/trip005.module#Trip005Module',
+    
+  },
+  
+  {
     path: 'pages',
     component: Pages,
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: '**', redirectTo: 'pages/login' },
+  
+      
     
       
  
@@ -32,7 +65,10 @@ export const routes: Routes = [
       { path: 'festivalsnevent',loadChildren:'./festivalsnevents/festivalsnevents.module#FestivalsneventsModule'},
       { path: 'healthnwellness' , loadChildren:'./healthnwellness/healthnwellness.module#HealthnwellnessModule'},
       { path: 'aboutus' , loadChildren:'./aboutus/aboutus.module#AboutusModule'},
-      {path:'dashboard', loadChildren:'./dashboard/dashboard.module#DashboardModule'}
+      {path:'dashboard', loadChildren:'./dashboard/dashboard.module#DashboardModule'},
+
+
+      
       
     ]
   }

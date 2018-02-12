@@ -6,16 +6,16 @@
 <div class="panel-body" >
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 <!-- Indicators -->
-<ol class="carousel-indicators">
+<!-- <ol class="carousel-indicators">
 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 <li data-target="#myCarousel" data-slide-to="1"></li>
 <li data-target="#myCarousel" data-slide-to="2"></li>
-</ol>
+</ol> -->
 
 <!-- Wrapper for slides -->
 <div class="carousel-inner">
 <div class="item active">
-<img src="../../assets/images/pics/1.jpg" alt="Los Angeles" style="width:100%;height:100%">
+<img src="../../assets/images/pics/1.jpg" alt="Los Angeles" style="width:100%;height:500px">
 <!-- <div class="carousel-caption">
 <h3>New York</h3>
 <p>We love the Big Apple!</p>
@@ -23,7 +23,7 @@
 </div>
 
 <div class="item">
-<img src="../../assets/images/pics/2.jpg" alt="Chicago" style="width:100%;height:100%">
+<img src="../../assets/images/pics/2.jpg" alt="Chicago" style="width:100%;height:500px">
 <!-- <div class="carousel-caption">
 <h3>New York</h3>
 <p>We love the Big Apple!</p>
@@ -31,7 +31,7 @@
 </div>
 
 <div class="item">
-<img src="../../assets/images/pics/3.jpg" alt="New york" style="width:100%;height:100%">
+<img src="../../assets/images/pics/3.jpg" alt="New york" style="width:100%;height:500px">
 <!-- <div class="carousel-caption">
 <h3>New York</h3>
 <p>We love the Big Apple!</p>
@@ -95,13 +95,13 @@ Anamudi is an ideal spot for trekking.
 <div class="col-md-6">
 <div class="form-group form-black label-floating is-empty">
 <label for="fname" class="control-label">First Name</label>
-<input [(ngModel)]="fname" name="fname" class="form-control" id="fname" >
+<input [(ngModel)]="newEmail.fname" name="fname" class="form-control" id="fname"  >
 </div>
 </div>
 <div class="col-md-6">
 <div class="form-group form-black label-floating is-empty">
 <label class="control-label">Last Name</label>
-<input class="form-control" [(ngModel)]="lname" name="lname" >
+<input class="form-control" [(ngModel)]="newEmail.lname" name="lname" >
 </div>
 </div>
 </div>
@@ -110,7 +110,7 @@ Anamudi is an ideal spot for trekking.
 <div class="col-md-12">
 <div class="form-group form-black label-floating is-empty">
 <label class="control-label">Email</label>
-<input class="form-control" [(ngModel)]="email" name="email" > 
+<input class="form-control" [(ngModel)]="newEmail.email" name="email" > 
 </div>
 </div>
 </div>
@@ -118,13 +118,13 @@ Anamudi is an ideal spot for trekking.
 <div class="col-md-6">
 <div class="form-group form-black label-floating is-empty">
 <label class="control-label">Mobile</label>
-<input class="form-control" [(ngModel)]="mobile" name="mobile">
+<input class="form-control" [(ngModel)]="newEmail.mobile" name="mobile" mask="9" maxlength="10">
 </div>
 </div>
 <div class="col-md-6">
 <div class="form-group form-black label-floating is-empty">
 <label class="control-label">Place</label>
-<input class="form-control" [(ngModel)]="place" name="place" >
+<input class="form-control" [(ngModel)]="newEmail.place" name="place" >
 </div>
 </div>
 </div>
@@ -136,13 +136,13 @@ Anamudi is an ideal spot for trekking.
 
 <div class="form-group form-black label-floating is-empty">
 <label class="control-label">Write your query here</label>
-<textarea class="form-control" [(ngModel)]="content" name="content" ></textarea>
+<textarea class="form-control" [(ngModel)]="newEmail.content" name="content" ></textarea>
 </div>
 </div>
 </div>
 </div>
 
-<button type="submit" (click)="addPost($event)" class="btn btn-danger pull-right">Submit</button>
+<button type="submit" (click)="addPost($event);"(click)="sendEmail();" class="btn btn-danger pull-right">Submit</button>
 <div class="clearfix"></div>
 </form>
 

@@ -11,5 +11,6 @@ export class AyurvedaComponent implements OnInit {
 
   ngOnInit() {
   }
+  
 
 }
