@@ -45,6 +45,48 @@ export const routes: Routes = [
     loadChildren: 'app/pages/trip005/trip005.module#Trip005Module',
     
   },
+  {
+    path: 'trip006',
+    
+    loadChildren: 'app/pages/trip006/trip006.module#Trip006Module',
+    
+  },
+  {
+    path: 'trip007',
+    
+    loadChildren: 'app/pages/trip007/trip007.module#Trip007Module',
+    
+  },
+  {
+    path: 'trip008',
+    
+    loadChildren: 'app/pages/trip008/trip008.module#Trip008Module',
+    
+  },
+   {
+    path: 'trip009',
+    
+    loadChildren: 'app/pages/trip009/trip009.module#Trip009Module',
+    
+  },
+  {
+    path: 'trip010',
+    
+    loadChildren: 'app/pages/trip010/trip010.module#Trip010Module',
+    
+  },
+  {
+    path: 'trip011',
+    
+    loadChildren: 'app/pages/trip011/trip011.module#Trip011Module',
+    
+  },
+  {
+    path: 'trip012',
+    
+    loadChildren: 'app/pages/trip012/trip012.module#Trip012Module',
+    
+  },
   
   {
     path: 'pages',

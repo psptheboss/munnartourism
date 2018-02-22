@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-trip010',
+  selector: 'rip010',
   templateUrl: './trip010.component.html',
   styleUrls: ['./trip010.component.scss']
 })
-export class Trip010Component implements OnInit {
+export class Trip010 implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
   }
-
+  closePop(e){
+    setTimeout(function(){
+    
+       window.close();
+      }, 100 );
+    }
 }

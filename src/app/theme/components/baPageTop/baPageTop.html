@@ -1,14 +1,14 @@
 <div class="page-top clearfix" baScrollPosition maxHeight="50" (scrollChange)="scrolledChanged($event)"
-     [ngClass]="{scrolled: isScrolled}">
+     [ngClass]="{scrolled: isScrolled}" id="topDiv">
   <a routerLink="/pages/home" class="al-logo clearfix"><span>Munnar</span>Tourism</a>
   <a href (click)="toggleMenu()" class="collapse-menu-link ion-navicon"></a>
 
 
 
   <div class="user-profile clearfix">
-    <div class="dropdown al-user-profile">
+    <div class="dropdown al-user-profile" id="iconStyle">
       <a class="profile-toggle-link dropdown-toggle" id="user-profile-dd" data-toggle="dropdown" aria-expanded="false">
-      <h1>  <i class="fa fa-phone-square "></i></h1>
+      <h1>  <i class="fa fa-phone-square " ></i></h1>
       </a>
       <ul class="dropdown-menu top-dropdown-menu profile-dropdown" aria-labelledby="user-profile-dd">
         <li class="dropdown-item"><a href><i class="fa fa-whatsapp"></i>Whatsup Us</a></li>
