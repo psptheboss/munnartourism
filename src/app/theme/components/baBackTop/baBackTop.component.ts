@@ -21,13 +21,13 @@ export class BaBackTop {
 
   @HostListener('click')
   _onClick():boolean {
-   
+    jQuery('html, body').animate({scrollTop:0}, {duration:this.moveSpeed});
     return false;
   }
 
   @HostListener('window:scroll')
   _onWindowScroll():void {
     let el = this._selector.nativeElement;
-    
+    window.scrollY > this.position ? jQuery(el).fadeIn(this.showSpeed) : jQuery(el).fadeOut(this.showSpeed);
   }
 }
