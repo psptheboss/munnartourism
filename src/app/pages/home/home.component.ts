@@ -9,7 +9,6 @@ import {sendMail} from './home';
 import { Http, Response , Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Body } from '@angular/http/src/body';
-// import { provide } from '@angular/core';
 
 
 
@@ -67,7 +66,7 @@ newEmail={
 
   postDoc:AngularFirestoreDocument<Post>;
   post:Observable<Post>;
-  constructor(private window: Window,private afs:AngularFirestore,public toastr: ToastsManager,public vcr: ViewContainerRef,public http:Http) {
+  constructor(private afs:AngularFirestore,public toastr: ToastsManager,public vcr: ViewContainerRef,public http:Http) {
     this.toastr.setRootViewContainerRef(vcr);
    }
   
@@ -106,9 +105,7 @@ this.http.post('/sendEmail',JSON.stringify(this.newEmail),{headers:headers})
     )
   }  
   
-  getHost(){
-var hostname = this.window.location.hostname;
-  }
+  
   addPost(e) {
     if(this.newEmail.fname != "" &&  this.newEmail.lname != "" &&  this.newEmail.place != ""&&  this.newEmail.email != ""&&  this.newEmail.content != ""&&  this.newEmail.mobile != ""){
       this.afs.collection('posts').add({'fname': this.newEmail.fname, 'lname': this.newEmail.lname,'email': this.newEmail.email,'mobile': this.newEmail.mobile,'place': this.newEmail.place,'content': this.newEmail.content});

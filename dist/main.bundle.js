@@ -741,6 +741,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+// import {provide} from '@angular/core'
 /*
  * Platform and Environment providers/directives/pipes
  */

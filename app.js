@@ -10,7 +10,7 @@ app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 router.use(function(req, res, next) {  
-    res.header('Access-Control-Allow-Origin', 'http:10.0.0.5:3000');
+    res.header('Access-Control-Allow-Origin', 'http:172.20.10.8:3000');
     next();	
 });
 
@@ -29,8 +29,8 @@ app.route('/sendEmail').post(function (req,res){
 
     var email 	= require("emailjs/email");
     var server 	= email.server.connect({
-        user:    "pspalavesam", 
-        password:"palavesh@8870", 
+        user:    "munnarToursm", 
+        password:"munnarTou", 
         host:    "smtp.gmail.com", 
         ssl:     true
      });
@@ -38,10 +38,10 @@ app.route('/sendEmail').post(function (req,res){
     
       server.send({
            text:    "Do Not Reply",
-           from:    "pspalavesam@gmail.com", 
+           from:    "munnarToursm@gmail.com", 
            to:      "pspalavesam@gmail.com",
            cc:      "loganadhan007@gmail.com",
-           subject: "testing emailjs",
+           subject: "Online Enquiry",
            attachment: 
    [
       {data:"<html><table><thead><tr style='background-color:rgb(82, 189, 153)'><th>First Name</th><th>Last Name</th><th>Mobile</th><th>Email</th><th>Place</th><th>Query</th></tr></thead><tbody><tr><td>"+req.body.fname+"</td><td>"+req.body.lname+"</td><td>"+req.body.mobile+"</td><td>"+req.body.email+"</td><td>"+req.body.place+"</td><td>"+req.body.content+"</td></tr></tbody></table></html>", alternative:true}
