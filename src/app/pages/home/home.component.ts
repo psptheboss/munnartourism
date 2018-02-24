@@ -9,7 +9,7 @@ import {sendMail} from './home';
 import { Http, Response , Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Body } from '@angular/http/src/body';
-import { provide } from '@angular/core';
+// import { provide } from '@angular/core';
 
 
 
