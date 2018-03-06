@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
     <div class="col-md-12" id="scndDiv">
         <div class="panel  panel-transparent animated zoomIn" zoom-in="" >
         <div class="panel-heading" >Online Enquiry</div>
@@ -26,7 +26,6 @@
                     <td>{{post.data.place}}</td>
                     <td>{{post.data.content}}</td>
                     <td><input type="button" class="btn btn-default" (click)="deletePost(post.id)" value="Delete">
-                    <!-- <td><input type="button" class="btn btn-default" (click)="editPost(post.id)" value="Edit"> -->
                       </td>
                   </tr>
                   
@@ -35,9 +34,32 @@
         </div>
         </div>
         </div>
-</div>
-
-    <div class="container">
-  
-          </div>
+</div> -->
+<table>
+    
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Email</th>
+        <th scope="col">Place</th>
+        <th scope="col">Query</th>
+        <th scope="col">Actions</th>
+        
+        
+      </tr>
+    </thead>
+    <tbody *ngFor ="let post of posts | async">
+        <tr>
+        <td data-label="Name">{{ post.data.fname }}  {{ post.data.lname }}</td>
+        <td data-label="Mobile">{{post.data.mobile}}</td>
+        <td data-label="Email">{{post.data.email}}</td>
+        <td data-label="Place">{{post.data.place}}</td>
+        <td data-label="Query">{{post.data.content}}</td>
+        <td data-label="Action"><input type="button" class="btn btn-default" (click)="deletePost(post.id)" value="Delete"></td>
+        
+      </tr>
+     
+    </tbody>
+  </table>
     

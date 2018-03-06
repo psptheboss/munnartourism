@@ -10,7 +10,7 @@ app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 router.use(function(req, res, next) {  
-    res.header('Access-Control-Allow-Origin', 'http:172.20.10.8:3000');
+    res.header('Access-Control-Allow-Origin', 'http:10.0.0.5:3000');
     next();	
 });
 
@@ -30,7 +30,7 @@ app.route('/sendEmail').post(function (req,res){
     var email 	= require("emailjs/email");
     var server 	= email.server.connect({
         user:    "munnarToursm", 
-        password:"munnarTou", 
+        password:"munnarToursm18", 
         host:    "smtp.gmail.com", 
         ssl:     true
      });

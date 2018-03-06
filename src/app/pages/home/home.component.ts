@@ -109,7 +109,7 @@ this.http.post('/sendEmail',JSON.stringify(this.newEmail),{headers:headers})
   addPost(e) {
     if(this.newEmail.fname != "" &&  this.newEmail.lname != "" &&  this.newEmail.place != ""&&  this.newEmail.email != ""&&  this.newEmail.content != ""&&  this.newEmail.mobile != ""){
       this.afs.collection('posts').add({'fname': this.newEmail.fname, 'lname': this.newEmail.lname,'email': this.newEmail.email,'mobile': this.newEmail.mobile,'place': this.newEmail.place,'content': this.newEmail.content});
-      this.toastr.success('Saved!');
+      this.toastr.success('We have succesfully recieved your message.Thanks!');
       
       
     }

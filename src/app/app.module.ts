@@ -12,7 +12,8 @@ import {ToastModule} from 'ng2-toastr/ng2-toastr';
 import { ToastOptions } from 'ng2-toastr/src/toast-options';
 import { CustomOption } from './pages/home/custom-toast';
 import { Calendar } from './pages/dashboard/calendar/calendar.component';
-import { UsersService } from './users.service'
+import { UsersService } from './users.service';
+import { PopupModule } from 'ng2-opd-popup';
 // import {provide} from '@angular/core'
 
 /*
@@ -27,6 +28,7 @@ import { GlobalState } from './global.state';
 import { NgaModule } from './theme/nga.module';
 import { PagesModule } from './pages/pages.module';
 import { CommonModule } from '@angular/common';
+
 
 
 var firebaseConfig = {

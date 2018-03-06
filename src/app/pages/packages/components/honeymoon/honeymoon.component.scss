@@ -1,62 +1,61 @@
-h3{
-  color:rgb(0, 0, 0);
+#panelBody{
+  padding: 0%;
 }
-// img{
-//   opacity: 0.5;
-// }
-.button {
-  background-color: #004A7F;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  border: none;
-  color: rgb(241, 248, 234);
-  cursor: pointer;
-  display: inline-block;
-  font-family:Kristen ITC;
-  font-size: 11px;
-  padding: 5px 10px;
+#destTitle{
+  font-size: 20pt;
+  color:lightyellow
+  
+}
+#calndr{
+  background-color:orange;
+  padding-bottom: 5px;
+  padding-top: 5px;
   text-align: center;
-  text-decoration: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  
 }
-@-webkit-keyframes glowing {
-  0% { background-color: rgb(7, 148, 101); -webkit-box-shadow: 0 0 3px rgb(7, 148, 101); }
-  50% { background-color: rgb(0, 255, 200); -webkit-box-shadow: 0 0 40px rgb(0, 255, 200); }
-  100% { background-color: rgb(7, 148, 101); -webkit-box-shadow: 0 0 3px rgb(7, 148, 101); }
+#margn{
+  margin-bottom: 0px;
+  font-size: 20pt;
 }
-
-@-moz-keyframes glowing {
-  0% { background-color: rgb(7, 148, 101); -moz-box-shadow: 0 0 3px rgb(7, 148, 101); }
-  50% { background-color: rgb(0, 255, 200); -moz-box-shadow: 0 0 40px rgb(0, 255, 200); }
-  100% { background-color: rgb(7, 148, 101); -moz-box-shadow: 0 0 3px rgb(7, 148, 101); }
+#destHead{
+  font-size: 25pt;
+  text-align:center;
+  font-family:'Raleway';
+  padding-bottom: 5px
+  
 }
-
-@-o-keyframes glowing {
-  0% { background-color: rgb(7, 148, 101); box-shadow: 0 0 3px rgb(7, 148, 101); }
-  50% { background-color: rgb(0, 255, 200); box-shadow: 0 0 40px rgb(0, 255, 200); }
-  100% { background-color: rgb(7, 148, 101); box-shadow: 0 0 3px rgb(7, 148, 101); }
+#more{
+ font-size: 15pt; 
 }
-
-@keyframes glowing {
-  0% { background-color: rgb(7, 148, 101); box-shadow: 0 0 3px rgb(7, 148, 101); }
-  50% { background-color: rgb(0, 255, 200); box-shadow: 0 0 40px rgb(0, 255, 200); }
-  100% { background-color: rgb(7, 148, 101); box-shadow: 0 0 3px rgb(7, 148, 101); }
+#panelBody1{
+  padding: 2px;
+  margin-bottom: 0%;
+  padding-right: 5px;
+  background-image:url("/assets/img/peachy-bg.jpg");
+  
+  border-radius: 20px;
+  border-style: hidden;
+  
 }
-
-.button {
-  -webkit-animation: glowing 1500ms infinite;
-  -moz-animation: glowing 1500ms infinite;
-  -o-animation: glowing 1500ms infinite;
-  animation: glowing 1500ms infinite;
+img{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
-#mainDiv{
-  padding-left: 0%;
-  padding-right: 2%;
-  padding-bottom: 10%;
+#borrr{
+  border-radius: 20px;
+  border-color: orange;
+  border-width: 5px;
 }
-#sideDiv{
-  padding-left: 0%;
-  padding-right: 0%;
+#divText{
+  padding-top: 5px;
+  text-align: center;
 }
-#capDiv{
-  padding-bottom: 150px;
-}
+h3{
+    color:rgb(0, 0, 0);
+  }
+//   img{
+//     opacity: 0.5;
+//   }
+ 
