@@ -17,6 +17,8 @@
       "es2016",
       "dom"
     ],
+    "angularCompilerOptions": {},
+    
     "plugins": [
       { "name": "tslint-language-service"}
     ]
